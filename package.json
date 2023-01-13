@@ -1,12 +1,13 @@
 {
-  "name": "rlp-proxy",
+  "name": "get_link_preview",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "gcp-build": "tsc -p ."
   },
   "keywords": [],
   "author": "",
@@ -23,7 +24,6 @@
     "axios": "^1.2.2",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",
-    "express-limiter": "^1.6.1",
     "html-metadata-parser": "^2.0.4",
     "redis": "^4.5.1"
   }

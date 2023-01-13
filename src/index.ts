@@ -20,8 +20,6 @@ app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
 
-app.use(express.static("public"));
-
 app.get("/", async (req, res) => {
   const url = req.query.url as unknown as string;
   const metadata = await getMetadata(url);
@@ -68,7 +66,7 @@ app.get("/v2", async (req, res) => {
     }
   } catch (error) {
     return res.set("Access-Control-Allow-Origin", "*").status(500).json({
-      error: "Internal server error. Please open a Github issue or contact me on Twitter @dhaiwat10 if the issue persists.",
+      error: "Internal server error. Please open a Github issue or contact me on Twitter @bbabystyle if the issue persists.",
     });
   }
 });
